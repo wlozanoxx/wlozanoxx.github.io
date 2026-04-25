@@ -1,3 +1,3 @@
-# wlozanoxx.github.io
+# Project Overview
 
-![Alt Text](Screenshot_61.png)
+This is a simple description of the project, without any image references.
