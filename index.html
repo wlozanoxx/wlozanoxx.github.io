@@ -1,33 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Price Tags</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Gallery</title>
     <style>
-        .price-tag {
-            width: 100px;
-            height: 100px;
-            background: red;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
             color: white;
-            text-align: center;
-            line-height: 100px;
-            position: relative;
-            font-size: 20px;
-            border-radius: 10px;
         }
-        .price-tag:after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-top: 50px solid red;
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .item {
+            position: relative;
+            overflow: hidden;
+        }
+        .item img {
+            width: 100%;
+            display: block;
+        }
+        .price {
             position: absolute;
-            bottom: -50px;
-            left: 0;
+            top: 10px;
+            left: 10px;
+            background: red;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .qr-code {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 50px;
         }
     </style>
 </head>
 <body>
-    <div class="price-tag">$99.99</div>
+    <h1>Product Gallery</h1>
+    <div class="gallery">
+        <div class="item">
+            <img src="Screenshot_61.png" alt="Product 1">
+            <div class="price">$19.99</div>
+        </div>
+        <div class="item">
+            <img src="download.jpg" alt="Product 2">
+            <div class="price">$29.99</div>
+        </div>
+        <div class="item">
+            <img src="download (1).jpg" alt="Product 3">
+            <div class="price">$39.99</div>
+        </div>
+        <div class="item">
+            <img src="download (2).jpg" alt="Product 4">
+            <div class="price">$49.99</div>
+        </div>
+        <div class="item">
+            <img src="download (3).jpg" alt="Product 5">
+            <div class="price">$59.99</div>
+        </div>
+        <div class="item">
+            <img src="download (4).jpg" alt="Product 6">
+            <div class="price">$69.99</div>
+        </div>
+        <div class="item">
+            <img src="download (5).jpg" alt="Product 7">
+            <div class="price">$79.99</div>
+        </div>
+        <div class="item">
+            <img src="download (6).jpg" alt="Product 8">
+            <div class="price">$89.99</div>
+        </div>
+    </div>
+    <img class="qr-code" src="https://example.com/qrcode_pediloyaar.png" alt="QR Code @pediloyaar">
+    <img class="qr-code" src="https://example.com/qrcode_cubo3d_ar.png" alt="QR Code @cubo3d_ar">
 </body>
 </html>
